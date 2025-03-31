@@ -1,0 +1,235 @@
+﻿@model IEnumerable<Sahafa.Models.Stationery>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Quản lý Văn Phòng Phẩm";
+    var suppliers = ViewBag.Suppliers as List<SelectListItem>;
+    var types = ViewBag.StationeryTypes as List<SelectListItem>;
+}
+
+<div class="container mt-4">
+    <h2 class="text-primary mb-3">Quản lý Văn Phòng Phẩm</h2>
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    <!-- Form Thêm Stationery -->
+    <div class="card p-4 shadow mb-4">
+        <h4 class="mb-3">Thêm Văn Phòng Phẩm</h4>
+        <form method="post" enctype="multipart/form-data" action="@Url.Action("AddStationery", "Manager")">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Mã VPP</label>
+                    <input type="text" name="StationeryID" class="form-control" required />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Tên VPP</label>
+                    <input type="text" name="Name" class="form-control" required />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Nhà cung cấp</label>
+                    <select name="SupplierID" class="form-control">
+                        <option value="">--Chọn nhà cung cấp--</option>
+                        @if (suppliers != null)
+                        {
+                            foreach (var s in suppliers)
+                            {
+                                <option value="@s.Value">@s.Text</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Giá</label>
+                    <input type="number" step="0.01" name="Price" class="form-control" required />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Trạng thái</label>
+                    <select name="Status" class="form-control">
+                        <option value="1">Available</option>
+                        <option value="2">Out of Stock</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Loại</label>
+                    <select name="TypeID" class="form-control">
+                        <option value="">--Chọn loại--</option>
+                        @if (types != null)
+                        {
+                            foreach (var t in types)
+                            {
+                                <option value="@t.Value">@t.Text</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <label class="form-label">Ảnh</label>
+                    <input type="file" name="imageFile" class="form-control-file" />
+                </div>
+            </div>
+            <div class="d-flex justify-content-end mt-3">
+                <button type="submit" class="btn btn-success me-2">Thêm</button>
+                <button type="reset" class="btn btn-secondary">Hủy</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bảng Danh sách Stationery -->
+    <div class="card shadow mb-4">
+        <div class="card-header bg-dark text-white">Danh sách Văn Phòng Phẩm</div>
+        <div class="card-body">
+            <table class="table table-hover table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Mã VPP</th>
+                        <th>Tên VPP</th>
+                        <th>Nhà cung cấp</th>
+                        <th>Giá</th>
+                        <th>Trạng thái</th>
+                        <th>Loại</th>
+                        <th>Ảnh</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var st in Model)
+                    {
+                        <tr data-oldid="@st.StationeryID"
+                            data-name="@st.Name"
+                            data-supplier="@st.SupplierID"
+                            data-price="@st.Price"
+                            data-status="@st.Status"
+                            data-typeid="@(st.TypeID.HasValue ? st.TypeID.ToString() : "")"
+                            data-image="@st.Image">
+                            <td>@st.StationeryID</td>
+                            <td>@st.Name</td>
+                            <td>@st.SupplierName</td>
+                            <td>@st.Price</td>
+                            <td>@(st.Status == 1 ? "Available" : "Out of Stock")</td>
+                            <td>@st.TypeName</td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(st.Image))
+                                {
+                                    <img src="@st.Image" alt="Image" style="max-width:60px; max-height:60px;" />
+                                }
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-warning btn-sm editBtn" data-bs-toggle="modal" data-bs-target="#editStationeryModal">
+                                    Sửa
+                                </button>
+                                <form method="post" action="@Url.Action("DeleteStationery", "Manager")" class="d-inline">
+                                    <input type="hidden" name="stationeryID" value="@st.StationeryID" />
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Xóa sản phẩm này?');">
+                                        Xóa
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Sửa Stationery -->
+<div class="modal fade" id="editStationeryModal" tabindex="-1" aria-labelledby="editStationeryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" enctype="multipart/form-data" action="@Url.Action("UpdateStationery", "Manager")">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editStationeryModalLabel">Sửa Văn Phòng Phẩm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Ẩn lưu trữ mã cũ -->
+                    <input type="hidden" id="editOldID" name="oldID" />
+                    <div class="mb-3">
+                        <label class="form-label">Mã VPP</label>
+                        <input type="text" class="form-control" id="editNewID" name="newID" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tên VPP</label>
+                        <input type="text" class="form-control" id="editName" name="name" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Nhà cung cấp</label>
+                        <select class="form-control" id="editSupplier" name="supplierID">
+                            <option value="">--Chọn nhà cung cấp--</option>
+                            @if (suppliers != null)
+                            {
+                                foreach (var s in suppliers)
+                                {
+                                    <option value="@s.Value">@s.Text</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Giá</label>
+                        <input type="number" step="0.01" class="form-control" id="editPrice" name="price" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Trạng thái</label>
+                        <select class="form-control" id="editStatus" name="status">
+                            <option value="1">Available</option>
+                            <option value="2">Out of Stock</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Loại</label>
+                        <select class="form-control" id="editTypeID" name="TypeID">
+                            <option value="">--Chọn loại--</option>
+                            @if (types != null)
+                            {
+                                foreach (var t in types)
+                                {
+                                    <option value="@t.Value">@t.Text</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Ảnh (Nếu muốn thay)</label>
+                        <input type="file" class="form-control-file" name="imageFile" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".editBtn").click(function () {
+                var row = $(this).closest("tr");
+                // Sử dụng attr để lấy giá trị từ các data attributes
+                var oldID = row.attr("data-oldid");
+                var name = row.attr("data-name");
+                var supplier = row.attr("data-supplier");
+                var price = row.attr("data-price");
+                var status = row.attr("data-status");
+                var typeid = row.attr("data-typeid");
+
+                $("#editOldID").val(oldID);
+                $("#editNewID").val(oldID); // Mặc định là cũ, người dùng có thể thay đổi
+                $("#editName").val(name);
+                $("#editSupplier").val(supplier);
+                $("#editPrice").val(price);
+                $("#editStatus").val(status);
+                $("#editTypeID").val(typeid);
+            });
+        });
+    </script>
+}

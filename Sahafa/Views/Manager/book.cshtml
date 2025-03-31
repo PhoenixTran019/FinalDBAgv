@@ -1,0 +1,409 @@
+﻿@model IEnumerable<BookViewModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+// Tạo biến allBookTypeOptions để sử dụng trong JS cho danh sách thể loại
+@{
+    var bookTypes = ViewBag.BookTypes as List<SelectListItem>;
+    var allBookTypeOptions = "";
+    if (bookTypes != null)
+    {
+        foreach (var bt in bookTypes)
+        {
+            allBookTypeOptions += $"<option value=\"{bt.Value}\">{bt.Text}</option>";
+        }
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Quản lý Sách</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        .remove-type-btn {
+            margin-top: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="mb-4">Quản lý Sách</h2>
+
+        <!-- Form Thêm Sách -->
+        <div class="card mb-4">
+            <div class="card-header">Thêm sách mới</div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data" action="@Url.Action("AddBook", "Manager")">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="BookID">Book ID</label>
+                            <input type="text" class="form-control" id="BookID" name="book.BookID" required />
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="Title">Title</label>
+                            <input type="text" class="form-control" id="Title" name="book.Title" required />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="AuthorID">Tác giả</label>
+                            <select class="form-control" id="AuthorID" name="book.AuthorID" required>
+                                <option value="">Chọn tác giả</option>
+                                @if (ViewBag.Authors != null)
+                                {
+                                    foreach (SelectListItem author in ViewBag.Authors)
+                                    {
+                                        <option value="@author.Value">
+                                            @author.Text
+                                        </option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="SupplierID">Nhà cung cấp</label>
+                            <select class="form-control" id="SupplierID" name="book.SupplierID" required>
+                                <option value="">Chọn nhà cung cấp</option>
+                                @if (ViewBag.Suppliers != null)
+                                {
+                                    foreach (SelectListItem supplier in ViewBag.Suppliers)
+                                    {
+                                        <option value="@supplier.Value">
+                                            @supplier.Text
+                                        </option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="Price">Price</label>
+                            <input type="number" class="form-control" id="Price" name="book.Price" step="0.01" required />
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="Image">Image</label>
+                            <input type="file" class="form-control-file" id="Image" name="imageFile" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="Status">Trạng thái</label>
+                            <select class="form-control" id="Status" name="book.Status" required>
+                                <option value="1">Available</option>
+                                <option value="2">Out Stock</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="PublicationYear">Publication Year</label>
+                            <input type="number" class="form-control" id="PublicationYear" name="book.PublicationYear" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Description">Description</label>
+                        <textarea class="form-control" id="Description" name="book.Description" rows="3"></textarea>
+                    </div>
+                    <!-- Danh sách thể loại -->
+                    <div id="bookTypeContainer">
+                        <div class="form-row align-items-end book-type-row">
+                            <div class="form-group col-md-10">
+                                <label>Thể loại</label>
+                                <select class="form-control" name="bookTypeIDs">
+                                    <option value="">Chọn thể loại</option>
+                                    @if (bookTypes != null)
+                                    {
+                                        foreach (SelectListItem bt in bookTypes)
+                                        {
+                                            <option value="@bt.Value">@bt.Text</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <button type="button" class="btn btn-danger remove-type-btn">Xóa</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary mb-3" id="addBookTypeBtn">Thêm thể loại</button>
+                    <br />
+                    <button type="submit" class="btn btn-primary">Thêm sách</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Danh sách Sách -->
+        <div class="card">
+            <div class="card-header">Danh sách sách</div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>BookID</th>
+                            <th>Title</th>
+                            <th>Tác giả</th>
+                            <th>Nhà cung cấp</th>
+                            <th>Price</th>
+                            <th>Image</th>
+                            <th>Thể loại</th>
+                            <th>Trạng thái</th>
+                            <th>Publication Year</th>
+                            <th>Description</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null)
+                        {
+                            foreach (var book in Model)
+                            {
+                                <tr data-status="@book.Status">
+                                    <td>@book.BookID</td>
+                                    <td>@book.Title</td>
+                                    <td>@book.AuthorName</td>
+                                    <td>@book.SupplierName</td>
+                                    <td>@book.Price</td>
+                                    <td>
+                                        @if (!string.IsNullOrEmpty(book.Image))
+                                        {
+                                            <img src="@book.Image" alt="Image" style="max-width:80px;" />
+                                        }
+                                    </td>
+                                    <td>@string.Join(", ", book.BookTypes)</td>
+                                    <td>@(book.Status == 1 ? "Available" : "Out Stock")</td>
+                                    <td>@book.PublicationYear</td>
+                                    <td>@book.Description</td>
+                                    <td>
+                                        <button type="button" class="btn btn-warning btn-sm editBookBtn" data-bookid="@book.BookID">Sửa</button>
+                                        <form method="post" action="@Url.Action("DeleteBook", "Manager")" style="display:inline;">
+                                            <input type="hidden" name="bookID" value="@book.BookID" />
+                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa sách này?');">Xóa</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Sửa Sách -->
+    <div class="modal fade" id="editBookModal" tabindex="-1" role="dialog" aria-labelledby="editBookModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <form method="post" enctype="multipart/form-data" action="@Url.Action("EditBook", "Manager")">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editBookModalLabel">Sửa sách</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Lưu trữ OldBookID -->
+                        <input type="hidden" id="oldBookID" name="oldBookID" />
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="newBookID">Book ID</label>
+                                <input type="text" class="form-control" id="newBookID" name="newBookID" required />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="editTitle">Title</label>
+                                <input type="text" class="form-control" id="editTitle" name="title" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="editAuthorID">Tác giả</label>
+                                <select class="form-control" id="editAuthorID" name="authorID" required>
+                                    <option value="">Chọn tác giả</option>
+                                    @if (ViewBag.Authors != null)
+                                    {
+                                        foreach (SelectListItem author in ViewBag.Authors)
+                                        {
+                                            <option value="@author.Value">@author.Text</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="editSupplierID">Nhà cung cấp</label>
+                                <select class="form-control" id="editSupplierID" name="supplierID" required>
+                                    <option value="">Chọn nhà cung cấp</option>
+                                    @if (ViewBag.Suppliers != null)
+                                    {
+                                        foreach (SelectListItem supplier in ViewBag.Suppliers)
+                                        {
+                                            <option value="@supplier.Value">@supplier.Text</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="editPrice">Price</label>
+                                <input type="number" class="form-control" id="editPrice" name="price" step="0.01" required />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="editImage">Image</label>
+                                <input type="file" class="form-control-file" id="editImage" name="imageFile" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="editStatus">Trạng thái</label>
+                                <select class="form-control" id="editStatus" name="status" required>
+                                    <option value="1">Available</option>
+                                    <option value="2">Out Stock</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="editPublicationYear">Publication Year</label>
+                                <input type="number" class="form-control" id="editPublicationYear" name="publicationYear" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="editDescription">Description</label>
+                            <textarea class="form-control" id="editDescription" name="description" rows="3"></textarea>
+                        </div>
+                        <!-- Danh sách thể loại -->
+                        <div id="editBookTypeContainer">
+                            <div class="form-row align-items-end edit-book-type-row">
+                                <div class="form-group col-md-10">
+                                    <label>Thể loại</label>
+                                    <select class="form-control" name="bookTypeIDs">
+                                        <option value="">Chọn thể loại</option>
+                                        @if (bookTypes != null)
+                                        {
+                                            foreach (SelectListItem bt in bookTypes)
+                                            {
+                                                <option value="@bt.Value">@bt.Text</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <button type="button" class="btn btn-danger remove-type-btn">Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary" id="editAddBookTypeBtn">Thêm thể loại</button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                        <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Thêm dòng thể loại trong form Thêm Sách
+            $("#addBookTypeBtn").click(function () {
+                var newRow = $(".book-type-row").first().clone();
+                newRow.find("select").val("");
+                $("#bookTypeContainer").append(newRow);
+            });
+            // Xóa dòng thể loại trong form Thêm Sách
+            $("#bookTypeContainer").on("click", ".remove-type-btn", function () {
+                if ($("#bookTypeContainer .book-type-row").length > 1) {
+                    $(this).closest(".book-type-row").remove();
+                } else {
+                    alert("Phải có ít nhất 1 thể loại");
+                }
+            });
+            // Thêm dòng thể loại trong form Edit Sách
+            $("#editAddBookTypeBtn").click(function () {
+                var newRow = $(".edit-book-type-row").first().clone();
+                newRow.find("select").val("");
+                $("#editBookTypeContainer").append(newRow);
+            });
+            // Xóa dòng thể loại trong form Edit Sách
+            $("#editBookTypeContainer").on("click", ".remove-type-btn", function () {
+                if ($("#editBookTypeContainer .edit-book-type-row").length > 1) {
+                    $(this).closest(".edit-book-type-row").remove();
+                } else {
+                    alert("Phải có ít nhất 1 thể loại");
+                }
+            });
+            // Xử lý nút Sửa: load dữ liệu từ dòng được chọn vào modal
+            $(".editBookBtn").click(function () {
+                var bookID = $(this).data("bookid");
+                $("#oldBookID").val(bookID);
+                $("#newBookID").val(bookID);
+                var row = $(this).closest("tr");
+                $("#editTitle").val(row.find("td:nth-child(2)").text().trim());
+                $("#editPrice").val(row.find("td:nth-child(5)").text().trim());
+
+                // Chọn tác giả
+                var authorText = row.find("td:nth-child(3)").text().trim();
+                $("#editAuthorID option").prop("selected", false);
+                $("#editAuthorID option").each(function () {
+                    if ($(this).text().trim() === authorText) {
+                        $(this).prop("selected", true);
+                    }
+                });
+                // Chọn nhà cung cấp
+                var supplierText = row.find("td:nth-child(4)").text().trim();
+                $("#editSupplierID option").prop("selected", false);
+                $("#editSupplierID option").each(function () {
+                    if ($(this).text().trim() === supplierText) {
+                        $(this).prop("selected", true);
+                    }
+                });
+                // Set trạng thái từ data-status của tr
+                var statusVal = row.data("status");
+                $("#editStatus").val(statusVal);
+                // Set PublicationYear và Description, giả sử cột PublicationYear là thứ 9, Description là thứ 10
+                $("#editPublicationYear").val(row.find("td:nth-child(9)").text().trim());
+                $("#editDescription").val(row.find("td:nth-child(10)").text().trim());
+
+                // Xử lý thể loại
+                $("#editBookTypeContainer").empty();
+                var types = row.find("td:nth-child(7)").text().split(",");
+                $.each(types, function (i, t) {
+                    var trimmed = $.trim(t);
+                    if (trimmed !== "") {
+                        var rowHtml = ''
+                            + '<div class="form-row align-items-end edit-book-type-row">'
+                            + '   <div class="form-group col-md-10">'
+                            + '       <label>Thể loại</label>'
+                            + '       <select class="form-control" name="bookTypeIDs">'
+                            + '           <option value="">Chọn thể loại</option>'
+                            + '           @Html.Raw(allBookTypeOptions)'
+                            + '       </select>'
+                            + '   </div>'
+                            + '   <div class="form-group col-md-2">'
+                            + '       <button type="button" class="btn btn-danger remove-type-btn">Xóa</button>'
+                            + '   </div>'
+                            + '</div>';
+                        $("#editBookTypeContainer").append(rowHtml);
+                        var lastSelect = $("#editBookTypeContainer .edit-book-type-row").last().find("select");
+                        lastSelect.find("option").each(function () {
+                            if ($(this).text().trim() === trimmed) {
+                                $(this).prop("selected", true);
+                            }
+                        });
+                    }
+                });
+                if ($("#editBookTypeContainer").children().length === 0) {
+                    var defaultRow = $(".edit-book-type-row").first().clone();
+                    defaultRow.find("select").val("");
+                    $("#editBookTypeContainer").append(defaultRow);
+                }
+                $("#editBookModal").modal("show");
+            });
+        });
+    </script>
+</body>
+</html>

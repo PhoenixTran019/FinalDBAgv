@@ -1,0 +1,804 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Visual Project\\FinalAvdSQLA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\controllers\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\manager\\stationeries.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\manager\\stationeries.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\models\\stationery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\models\\stationery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\manager\\employees.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\manager\\employees.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\manager\\booktypes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\manager\\booktypes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\manager\\authors.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\manager\\authors.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\models\\accountemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\models\\accountemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\manager\\suppliers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\manager\\suppliers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\models\\bookviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\models\\bookviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\models\\booktype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\models\\booktype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\manager\\book.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\manager\\book.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\models\\registercustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\models\\registercustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\models\\book_booktype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\models\\book_booktype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\models\\authors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\models\\authors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\models\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\models\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\models\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\models\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\properties\\servicedependencies.local.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\properties\\servicedependencies.local.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/PH09N1X/Sahafa/True/SqlTable/dbo.Employees.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\Migrations\\20250310133227_FixStationeryPrice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Sahafa\\Data\\Migrations\\20250310133227_FixStationeryPrice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\Migrations\\20250310132802_FixStationeryPrice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Sahafa\\Data\\Migrations\\20250310132802_FixStationeryPrice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\models\\accountcustomers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\models\\accountcustomers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\Migrations\\20250310131018_FixStationeryPrice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Sahafa\\Data\\Migrations\\20250310131018_FixStationeryPrice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\Migrations\\20250310124245_UpdateSchema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Sahafa\\Data\\Migrations\\20250310124245_UpdateSchema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/PH09N1X/Sahafa/True/SqlTable/dbo.Book.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\Migrations\\20250310042957_Status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Sahafa\\Data\\Migrations\\20250310042957_Status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\wwwroot\\image\\4fff6aa5-f387-4336-91e3-8185f12ca5b8.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\wwwroot\\image\\4fff6aa5-f387-4336-91e3-8185f12ca5b8.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\employee\\managerdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\employee\\managerdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\books\\bookforkid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\books\\bookforkid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\books\\comics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\books\\comics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\properties\\servicedependencies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\properties\\servicedependencies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\sahafa.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\sahafa.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|d:\\visual project\\finalavdsqla\\sahafa\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4CB73541-BA8B-47EC-AF7A-B646B41C0C98}|Sahafa\\Sahafa.csproj|solutionrelative:sahafa\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Models\\Book.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\Book.cs",
+              "RelativeToolTip": "Sahafa\\Models\\Book.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAABoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T03:31:06.478Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Sahafa\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwB0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T04:20:43.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAFsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-28T05:43:11.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Employees.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Manager\\Employees.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Manager\\Employees.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Manager\\Employees.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Manager\\Employees.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAD0AAACPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T14:27:44.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AccountEmployee.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\AccountEmployee.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Models\\AccountEmployee.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\AccountEmployee.cs",
+              "RelativeToolTip": "Sahafa\\Models\\AccountEmployee.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAcwBMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T06:10:29.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Controllers\\BooksController.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "Sahafa\\Controllers\\BooksController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T13:39:20.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Stationery.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\Stationery.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Models\\Stationery.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\Stationery.cs",
+              "RelativeToolTip": "Sahafa\\Models\\Stationery.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAwBkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T03:18:54.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ManagerController.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Controllers\\ManagerController.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Controllers\\ManagerController.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Controllers\\ManagerController.cs",
+              "RelativeToolTip": "Sahafa\\Controllers\\ManagerController.cs",
+              "ViewState": "AgIAANgDAAAAAAAAAIAwwOIDAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T16:01:50.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Stationeries.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Manager\\Stationeries.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Manager\\Stationeries.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Manager\\Stationeries.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Manager\\Stationeries.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T14:59:49.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Supplier.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\Supplier.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Models\\Supplier.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\Supplier.cs",
+              "RelativeToolTip": "Sahafa\\Models\\Supplier.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAYwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T01:46:23.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "suppliers.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Manager\\suppliers.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Manager\\suppliers.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Manager\\suppliers.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Manager\\suppliers.cshtml",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAAwKIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-30T18:38:37.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Authors.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Manager\\Authors.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Manager\\Authors.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Manager\\Authors.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Manager\\Authors.cshtml",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAwwJMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T14:14:51.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Booktypes.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Manager\\Booktypes.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Manager\\Booktypes.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Manager\\Booktypes.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Manager\\Booktypes.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-30T17:23:33.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BookViewModel.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\BookViewModel.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Models\\BookViewModel.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\BookViewModel.cs",
+              "RelativeToolTip": "Sahafa\\Models\\BookViewModel.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAowAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T04:17:54.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Authors.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\Authors.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Models\\Authors.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\Authors.cs",
+              "RelativeToolTip": "Sahafa\\Models\\Authors.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T03:39:32.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BookType.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\BookType.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Models\\BookType.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\BookType.cs",
+              "RelativeToolTip": "Sahafa\\Models\\BookType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T02:43:03.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "book.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Manager\\book.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Manager\\book.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Manager\\book.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Manager\\book.cshtml",
+              "ViewState": "AgIAAGQBAAAAAAAAAAAAwGwBAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-07T00:30:22.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Sahafa\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T05:13:41.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RegisterCustomer.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\RegisterCustomer.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Models\\RegisterCustomer.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\RegisterCustomer.cs",
+              "RelativeToolTip": "Sahafa\\Models\\RegisterCustomer.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T05:14:53.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Book_BookType.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\Book_BookType.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Models\\Book_BookType.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\Book_BookType.cs",
+              "RelativeToolTip": "Sahafa\\Models\\Book_BookType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T02:44:32.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-01T04:44:48.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Customers.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\Customers.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Models\\Customers.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\Customers.cs",
+              "RelativeToolTip": "Sahafa\\Models\\Customers.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T15:30:00.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Employees.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\Employees.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Models\\Employees.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\Employees.cs",
+              "RelativeToolTip": "Sahafa\\Models\\Employees.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T06:19:48.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "RelativeToolTip": "Sahafa\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-01T04:26:08.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Program.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Program.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Program.cs",
+              "RelativeToolTip": "Sahafa\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T04:23:44.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Sahafa\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T05:49:29.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "serviceDependencies.local.json",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Properties\\serviceDependencies.local.json",
+              "RelativeDocumentMoniker": "Sahafa\\Properties\\serviceDependencies.local.json",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Properties\\serviceDependencies.local.json",
+              "RelativeToolTip": "Sahafa\\Properties\\serviceDependencies.local.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-01T04:27:08.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-01T04:20:15.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "dbo.Employees.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/PH09N1X/Sahafa/True/SqlTable/dbo.Employees.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/PH09N1X/Sahafa/True/SqlTable/dbo.Employees.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-11T00:32:10.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "20250310133227_FixStationeryPrice.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\Migrations\\20250310133227_FixStationeryPrice.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Data\\Migrations\\20250310133227_FixStationeryPrice.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\Migrations\\20250310133227_FixStationeryPrice.cs",
+              "RelativeToolTip": "Sahafa\\Data\\Migrations\\20250310133227_FixStationeryPrice.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T13:32:27.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "20250310132802_FixStationeryPrice.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\Migrations\\20250310132802_FixStationeryPrice.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Data\\Migrations\\20250310132802_FixStationeryPrice.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\Migrations\\20250310132802_FixStationeryPrice.cs",
+              "RelativeToolTip": "Sahafa\\Data\\Migrations\\20250310132802_FixStationeryPrice.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T13:28:02.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AccountCustomers.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\AccountCustomers.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Models\\AccountCustomers.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Models\\AccountCustomers.cs",
+              "RelativeToolTip": "Sahafa\\Models\\AccountCustomers.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T06:46:52.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "20250310131018_FixStationeryPrice.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\Migrations\\20250310131018_FixStationeryPrice.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Data\\Migrations\\20250310131018_FixStationeryPrice.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\Migrations\\20250310131018_FixStationeryPrice.cs",
+              "RelativeToolTip": "Sahafa\\Data\\Migrations\\20250310131018_FixStationeryPrice.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T13:10:19.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "20250310124245_UpdateSchema.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\Migrations\\20250310124245_UpdateSchema.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Data\\Migrations\\20250310124245_UpdateSchema.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\Migrations\\20250310124245_UpdateSchema.cs",
+              "RelativeToolTip": "Sahafa\\Data\\Migrations\\20250310124245_UpdateSchema.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T12:42:45.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "dbo.Book.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/PH09N1X/Sahafa/True/SqlTable/dbo.Book.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/PH09N1X/Sahafa/True/SqlTable/dbo.Book.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-10T04:28:45.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "20250310042957_Status.cs",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\Migrations\\20250310042957_Status.cs",
+              "RelativeDocumentMoniker": "Sahafa\\Data\\Migrations\\20250310042957_Status.cs",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Data\\Migrations\\20250310042957_Status.cs",
+              "RelativeToolTip": "Sahafa\\Data\\Migrations\\20250310042957_Status.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T04:29:57.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "4fff6aa5-f387-4336-91e3-8185f12ca5b8.jpg",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\wwwroot\\image\\4fff6aa5-f387-4336-91e3-8185f12ca5b8.jpg",
+              "RelativeDocumentMoniker": "Sahafa\\wwwroot\\image\\4fff6aa5-f387-4336-91e3-8185f12ca5b8.jpg",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\wwwroot\\image\\4fff6aa5-f387-4336-91e3-8185f12ca5b8.jpg",
+              "RelativeToolTip": "Sahafa\\wwwroot\\image\\4fff6aa5-f387-4336-91e3-8185f12ca5b8.jpg",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-09T06:42:14.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Sahafa\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Sahafa\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-06T15:12:25.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ManagerDashboard.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Employee\\ManagerDashboard.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Employee\\ManagerDashboard.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Employee\\ManagerDashboard.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Employee\\ManagerDashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-06T14:54:23.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-01T04:20:04.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-01T04:43:16.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "BookForKid.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Books\\BookForKid.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Books\\BookForKid.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Books\\BookForKid.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Books\\BookForKid.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-03T02:30:24.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Comics.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Books\\Comics.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Books\\Comics.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Books\\Comics.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Books\\Comics.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-03T02:28:58.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "serviceDependencies.json",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Properties\\serviceDependencies.json",
+              "RelativeDocumentMoniker": "Sahafa\\Properties\\serviceDependencies.json",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Properties\\serviceDependencies.json",
+              "RelativeToolTip": "Sahafa\\Properties\\serviceDependencies.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-01T04:24:57.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Sahafa\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Sahafa\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-01T04:24:54.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-01T04:21:10.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Sahafa",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Sahafa.csproj",
+              "RelativeDocumentMoniker": "Sahafa\\Sahafa.csproj",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Sahafa.csproj",
+              "RelativeToolTip": "Sahafa\\Sahafa.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-01T04:27:11.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Sahafa\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "D:\\Visual Project\\FinalAvdSQLA\\Sahafa\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Sahafa\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-01T04:23:37.847Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sahafa</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Sahafa.styles.css" asp-append-version="true" />
+</head>
+<div class="alert alert-info">
+    Debug: Role = @Context.Session.GetString("UserRole")
+</div>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                @{
+                    var username = Context.Session.GetString("Username");
+                    var role = Context.Session.GetString("UserRole"); // Lấy vai trò từ Session
+                    var homeController = role == "Manager" ? "Employee" : "Home";
+                    var homeAction = role == "Manager" ? "ManagerDashboard" : "Index";
+                }
+                <a class="navbar-brand" asp-area="" asp-controller="@homeController" asp-action="@homeAction">Sahafa</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        @if (role == "Manager")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Manager" asp-action="book">Sách</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Manager" asp-action="Stationeries">Văn phòng phẩm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Manager" asp-action="Suppliers">Nhà cung cấp</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Manager" asp-action="Employees">Nhân viên</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Invoices">Hóa đơn</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Manager" asp-action="Authors">Tác giả</a>
+                            </li>
+                            <!-- Menu Dropdown Khác cho Manager -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="otherDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Khác
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="otherDropdown">
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Manager" asp-action="BookTypes">Thêm Loại Sách</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Account" asp-action="Profile">Tài khoản</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Cart">Giỏ hàng</a>
+                            </li>
+                            <!-- Dropdown Sách -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="booksDropdown" role="button" data-bs-toggle="dropdown">
+                                    Sách
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/Books/Allbooks">Tất cả các loại sách</a></li>
+                                    <li><a class="dropdown-item" href="/Books/Textbooks">Sách giáo khoa</a></li>
+                                    <li><a class="dropdown-item" href="/Books/Novels">Tiểu thuyết</a></li>
+                                    <li><a class="dropdown-item" href="/Books/Comics">Truyện tranh</a></li>
+                                    <li><a class="dropdown-item" href="/Books/BookForKid">Sách Thiếu Nhi</a></li>
+                                    <li><a class="dropdown-item" href="/Books/Economics">Kinh tế</a></li>
+                                </ul>
+                            </li>
+                            <!-- Dropdown Văn phòng phẩm -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="stationeryDropdown" role="button" data-bs-toggle="dropdown">
+                                    Văn Phòng Phẩm
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/Stationery/Allstationery">Tất cả văn phòng phẩm</a></li>
+                                    <li><a class="dropdown-item" href="/Stationery/Pens">Bút bi</a></li>
+                                    <li><a class="dropdown-item" href="/Stationery/Notebooks">Tập</a></li>
+                                    <li><a class="dropdown-item" href="/Stationery/Rulers">Thước</a></li>
+                                    <li><a class="dropdown-item" href="/Stationery/Pencils">Bút chì</a></li>
+                                    <li><a class="dropdown-item" href="/Stationery/FountainPens">Bút máy</a></li>
+                                    <li><a class="dropdown-item" href="/Stationery/Markers">Bút lông</a></li>
+                                    <li><a class="dropdown-item" href="/Stationery/Highlighters">Bút dạ</a></li>
+                                    <li><a class="dropdown-item" href="/Stationery/Cards">Thẻ và dây đeo</a></li>
+                                    <li><a class="dropdown-item" href="/Stationery/Covers">Bìa</a></li>
+                                    <li><a class="dropdown-item" href="/Stationery/Handboards">Bảng cầm tay</a></li>
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+
+                    <!-- Ô tìm kiếm -->
+                    <form class="d-flex" action="/Search" method="get">
+                        <input class="form-control me-2" type="search" name="query" placeholder="Tìm kiếm sản phẩm" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Tìm kiếm</button>
+                    </form>
+
+                    <!-- Đăng nhập / Đăng ký / Tài khoản -->
+                    <ul class="navbar-nav ms-auto">
+                        @if (Context.Session.GetString("Username") != null)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown">
+                                    Hello, @Context.Session.GetString("FullName")
+                                </a>
+                                <ul class="dropdown-menu">
+                                    @if (role == "Manager")
+                                    {
+                                        <li><a class="dropdown-item" href="/Employee/ManagerDashboard">Trang quản lý</a></li>
+                                        <li><a class="dropdown-item" href="/Orders">Quản lý đơn hàng</a></li>
+                                    }
+                                    else if (role == "Staff")
+                                    {
+                                        <li><a class="dropdown-item" href="/Employee/StaffDashboard">Trang nhân viên</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li><a class="dropdown-item" href="/Account/Profile">Thông tin khách hàng</a></li>
+                                        <li><a class="dropdown-item" href="/Orders">Đơn hàng</a></li>
+                                        <li><a class="dropdown-item" href="/Orders/Details">Chi tiết đơn hàng</a></li>
+                                    }
+                                    <li><a class="dropdown-item text-danger" href="/Account/Logout">Đăng xuất</a></li>
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Account/Register">Đăng ký</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Account/Login">Đăng nhập</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - Sahafa - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

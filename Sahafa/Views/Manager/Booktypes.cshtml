@@ -1,0 +1,113 @@
+﻿@model IEnumerable<Sahafa.Models.BookType>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<h2>Quản lý Loại Sách</h2>
+
+<div class="mb-3">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBookTypeModal">
+        Thêm Loại Sách
+    </button>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>BookTypeID</th>
+            <th>Tên Loại Sách</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr data-id="@item.BookTypeID" data-typename="@item.TypeName">
+                <td>@item.BookTypeID</td>
+                <td>@item.TypeName</td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-warning editBtn" data-bs-toggle="modal" data-bs-target="#editBookTypeModal">
+                        Sửa
+                    </button>
+                    <form method="post" action="@Url.Action("DeleteBookType", "Manager")" style="display:inline;">
+                        <input type="hidden" name="bookTypeID" value="@item.BookTypeID" />
+                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa loại sách này?');">
+                            Xóa
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Modal Thêm Loại Sách -->
+<div class="modal fade" id="addBookTypeModal" tabindex="-1" aria-labelledby="addBookTypeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" action="@Url.Action("AddBookType", "Manager")">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addBookTypeModalLabel">Thêm Loại Sách</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="newTypeName" class="form-label">Tên Loại Sách</label>
+                        <input type="text" class="form-control" id="newTypeName" name="TypeName" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Sửa Loại Sách -->
+<div class="modal fade" id="editBookTypeModal" tabindex="-1" aria-labelledby="editBookTypeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" action="@Url.Action("UpdateBookType", "Manager")">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editBookTypeModalLabel">Sửa Loại Sách</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="editBookTypeID" name="bookTypeID" />
+                    <div class="mb-3">
+                        <label for="editTypeName" class="form-label">Tên Loại Sách</label>
+                        <input type="text" class="form-control" id="editTypeName" name="typeName" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Khi nhấn nút sửa, lấy dữ liệu từ hàng và đưa vào modal sửa
+            $(".editBtn").click(function () {
+                var row = $(this).closest("tr");
+                var id = row.data("id");
+                var typeName = row.data("typename");
+                $("#editBookTypeID").val(id);
+                $("#editTypeName").val(typeName);
+            });
+        });
+    </script>
+}

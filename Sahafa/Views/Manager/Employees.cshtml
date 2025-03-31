@@ -1,0 +1,120 @@
+﻿@model List<Sahafa.Models.Employees>
+
+@{
+    ViewData["Title"] = "Quản lý Nhân viên";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Quản lý Nhân viên</h2>
+
+    <!-- Form Thêm Nhân Viên -->
+    <form id="addEmployeeForm" method="post" action="@Url.Action("AddEmployee", "Manager")" class="mb-4">
+        <div class="row">
+            <div class="col-md-2">
+                <input type="text" name="FullName" class="form-control" placeholder="Họ và tên" required>
+            </div>
+            <div class="col-md-2">
+                <input type="email" name="Email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="col-md-2">
+                <input type="text" name="Phone" class="form-control" placeholder="Số điện thoại">
+            </div>
+            <div class="col-md-2">
+                <input type="text" name="Address" class="form-control" placeholder="Địa chỉ">
+            </div>
+            <div class="col-md-2">
+                <input type="date" name="DOB" class="form-control">
+            </div>
+            <div class="col-md-2">
+                <select name="EmployeeType" class="form-control">
+                    <option value="1">Quản lý</option>
+                    <option value="2">Nhân viên</option>
+                    <option value="3">Thử việc</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success mt-2">Thêm Nhân Viên</button>
+    </form>
+
+    <!-- Bảng Danh Sách Nhân Viên -->
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Họ và Tên</th>
+                <th>Email</th>
+                <th>SĐT</th>
+                <th>Địa chỉ</th>
+                <th>Ngày sinh</th>
+                <th>Loại</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+                <tr data-id="@employee.EmployeeID">
+                    <td><span class="view-mode">@employee.FullName</span><input type="text" class="edit-mode form-control d-none" value="@employee.FullName"></td>
+                    <td><span class="view-mode">@employee.Email</span><input type="email" class="edit-mode form-control d-none" value="@employee.Email"></td>
+                    <td><span class="view-mode">@employee.Phone</span><input type="text" class="edit-mode form-control d-none" value="@employee.Phone"></td>
+                    <td><span class="view-mode">@employee.Address</span><input type="text" class="edit-mode form-control d-none" value="@employee.Address"></td>
+                    <td><span class="view-mode">@employee.DOB?.ToString("yyyy-MM-dd")</span><input type="date" class="edit-mode form-control d-none" value="@employee.DOB?.ToString("yyyy-MM-dd")"></td>
+                    <td>
+                        <span class="view-mode">@(employee.EmployeeType == 1 ? "Quản lý" : employee.EmployeeType == 2 ? "Nhân viên" : "Thử Việc")</span>
+                        <select class="edit-mode form-control d-none">
+                            <option value="1" selected="@(employee.EmployeeType == 1)">Quản lý</option>
+                            <option value="2" selected="@(employee.EmployeeType == 2)">Nhân viên</option>
+                            <option value="3" selected="@(employee.EmployeeType == 3)">Thử việc</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="btn btn-warning btn-sm edit-btn">Sửa</button>
+                        <button class="btn btn-primary btn-sm save-btn d-none">Lưu</button>
+                        <form method="post" action="@Url.Action("DeleteEmployee", "Manager")" class="d-inline">
+                            <input type="hidden" name="id" value="@employee.EmployeeID">
+                            <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script>
+    document.querySelectorAll('.edit-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            let row = this.closest('tr');
+            row.querySelectorAll('.view-mode').forEach(el => el.classList.add('d-none'));
+            row.querySelectorAll('.edit-mode').forEach(el => el.classList.remove('d-none'));
+            this.classList.add('d-none');
+            row.querySelector('.save-btn').classList.remove('d-none');
+        });
+    });
+
+    document.querySelectorAll('.save-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            let row = this.closest('tr');
+            let id = row.getAttribute('data-id');
+            let fullName = row.querySelector('input[type="text"]').value;
+            let email = row.querySelector('input[type="email"]').value;
+            let phone = row.querySelectorAll('input[type="text"]')[1].value;
+            let address = row.querySelectorAll('input[type="text"]')[2].value;
+            let dob = row.querySelector('input[type="date"]').value;
+            let employeeType = row.querySelector('select').value;
+
+            fetch('@Url.Action("UpdateEmployee", "Manager")', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ 
+                    id, fullName, email, phone, address, dob, employeeType 
+                })
+            }).then(response => {
+                if (response.ok) {
+                    location.reload();
+                } else {
+                    alert("Có lỗi xảy ra!");
+                }
+            });
+        });
+    });
+</script>

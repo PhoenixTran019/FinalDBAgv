@@ -1,0 +1,162 @@
+﻿@model IEnumerable<Sahafa.Models.Supplier>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Quản lý Nhà Cung Cấp</h2>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<div class="mb-3">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addSupplierModal">
+        Thêm Nhà Cung Cấp
+    </button>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>SupplierID</th>
+            <th>SupplierName</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var supplier in Model)
+        {
+            <tr data-id="@supplier.SupplierID"
+                data-name="@supplier.SupplierName"
+                data-email="@supplier.Email"
+                data-phone="@supplier.Phone"
+                data-address="@supplier.Address">
+                <td>@supplier.SupplierID</td>
+                <td>@supplier.SupplierName</td>
+                <td>@supplier.Email</td>
+                <td>@supplier.Phone</td>
+                <td>@supplier.Address</td>
+                <td>
+                    <button type="button" class="btn btn-warning btn-sm editBtn" data-bs-toggle="modal" data-bs-target="#editSupplierModal">
+                        Sửa
+                    </button>
+                    <form method="post" action="@Url.Action("DeleteSupplier", "Manager")" style="display:inline;">
+                        <input type="hidden" name="supplierID" value="@supplier.SupplierID" />
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa nhà cung cấp này?');">
+                            Xóa
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Modal Thêm Nhà Cung Cấp -->
+<div class="modal fade" id="addSupplierModal" tabindex="-1" aria-labelledby="addSupplierModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" action="@Url.Action("AddSupplier", "Manager")">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addSupplierModalLabel">Thêm Nhà Cung Cấp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="newSupplierID" class="form-label">SupplierID</label>
+                        <input type="text" class="form-control" id="newSupplierID" name="SupplierID" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="newSupplierName" class="form-label">SupplierName</label>
+                        <input type="text" class="form-control" id="newSupplierName" name="SupplierName" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="newEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="newEmail" name="Email" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="newPhone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="newPhone" name="Phone" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="newAddress" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="newAddress" name="Address" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Sửa Nhà Cung Cấp -->
+<div class="modal fade" id="editSupplierModal" tabindex="-1" aria-labelledby="editSupplierModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" action="@Url.Action("UpdateSupplier", "Manager")">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editSupplierModalLabel">Sửa Nhà Cung Cấp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="oldSupplierID" name="oldSupplierID" />
+                    <div class="mb-3">
+                        <label for="editSupplierIDInput" class="form-label">SupplierID</label>
+                        <input type="text" class="form-control" id="editSupplierIDInput" name="newSupplierID" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="editSupplierName" class="form-label">SupplierName</label>
+                        <input type="text" class="form-control" id="editSupplierName" name="supplierName" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="editEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="editEmail" name="email" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="editPhone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="editPhone" name="phone" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="editAddress" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="editAddress" name="address" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Khi nhấn nút Sửa, lấy dữ liệu từ hàng và đưa vào modal
+            $(".editBtn").click(function () {
+                var row = $(this).closest("tr");
+                var id = row.data("id");
+                var name = row.data("name");
+                var email = row.data("email");
+                var phone = row.data("phone");
+                var address = row.data("address");
+
+                $("#oldSupplierID").val(id);
+                $("#editSupplierIDInput").val(id);
+                $("#editSupplierName").val(name);
+                $("#editEmail").val(email);
+                $("#editPhone").val(phone);
+                $("#editAddress").val(address);
+            });
+        });
+    </script>
+}
